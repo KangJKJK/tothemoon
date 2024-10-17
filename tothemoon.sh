@@ -59,11 +59,11 @@ case $choice in
         echo '[{' > "$WORK/configs/config.json"  # 시작 JSON 형식 추가
         while IFS= read -r line; do
             [[ -z "$line" ]] && break
-            echo "  \"token\": \"$line\"," >> "$WORK/configs/config.json"  # 각 줄을 JSON 형식으로 추가
+            echo "  \"token\": \"$line\"" >> "$WORK/configs/config.json"  # 각 줄을 JSON 형식으로 추가
         done
         echo '}]' >> "$WORK/configs/config.json"  # 종료 JSON 형식 추가
     }
-
+    
     # 봇 구동
     node index.js
     ;;
