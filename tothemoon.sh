@@ -57,10 +57,13 @@ case $choice in
     # 쿼리 파일 생성 및 초기화
     {
         echo '[{' > "$WORK/configs/config.json"  # 시작 JSON 형식 추가
-        while IFS= read -r line; do
-            [[ -z "$line" ]] && break
-            echo "  \"token\": \"$line\"" >> "$WORK/configs/config.json"  # 각 줄을 JSON 형식으로 추가
+        while true; do
+            read -p "query_id를 입력하세요 (엔터로 종료): " line
+            [[ -z "$line" ]] && break  # 빈 줄이면 종료
+            echo "  \"token\": \"$line\"," >> "$WORK/configs/config.json"  # 각 줄을 JSON 형식으로 추가
         done
+        # 마지막 쉼표 제거
+        sed -i '$ s/,$//' "$WORK/configs/config.json"
         echo '}]' >> "$WORK/configs/config.json"  # 종료 JSON 형식 추가
     }
     
