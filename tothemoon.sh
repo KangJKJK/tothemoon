@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # 환경 변수 설정
-export WORK="/root/popp-tothemoon-bot"
+export WORK="/root/popp-to-the-moon-bot"
 export NVM_DIR="$HOME/.nvm"
 
 # 색상 정의
