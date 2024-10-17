@@ -13,7 +13,7 @@ NC='\033[0m' # 색상 초기화
 
 echo -e "${GREEN}Tothemoon 봇을 설치합니다.${NC}"
 echo -e "${GREEN}스크립트작성자: https://t.me/kjkresearch${NC}"
-echo -e "${GREEN}출처: https://github.com/dkzhen/popp-tothemoon-bot${NC}"
+echo -e "${GREEN}출처: https://github.com/Widiskel/popp-to-the-moon-bot${NC}"
 
 echo -e "${GREEN}설치 옵션을 선택하세요:${NC}"
 echo -e "${YELLOW}1. 봇 새로 설치${NC}"
@@ -37,7 +37,7 @@ case $choice in
 
     # GitHub에서 코드 복사
     echo -e "${YELLOW}GitHub에서 코드 복사 중...${NC}"
-    git clone https://github.com/dkzhen/popp-tothemoon-bot.git
+    git clone https://github.com/Widiskel/popp-to-the-moon-bot.git
     cd "$WORK"
 
     # Node.js LTS 버전 설치 및 사용
