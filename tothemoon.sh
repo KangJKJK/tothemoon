@@ -63,8 +63,8 @@ case $choice in
             echo "  \"token\": \"$line\"," >> "$WORK/configs/config.json"  # 각 줄을 JSON 형식으로 추가
         done
         # 마지막 쉼표 제거
-        sed -i '$ s/,$//' "$WORK/configs/config.json"
-        echo '}]' >> "$WORK/configs/config.json"  # 종료 JSON 형식 추가
+        sed -i '$ s/,$//' "$WORK/src/config.json"
+        echo '}]' >> "$WORK/src/config.json"  # 종료 JSON 형식 추가
     }
     
     # 봇 구동
